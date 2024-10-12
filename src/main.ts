@@ -9,7 +9,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   const options = new DocumentBuilder()
-    .setTitle('Propuesta IA')
+    .setTitle('Rive-Car')
     .setDescription(
       'This is the documentation for rive_car-backend.',
     )
