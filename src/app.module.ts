@@ -10,15 +10,19 @@ import { AuthModule } from './auth/auth.module';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'b0iezi8ucrlxjynakxhc-mysql.services.clever-cloud.com',
-      username: 'ul6jfokeo9buourz',
-      password: 'M5vjh8JbjikoBSpBdbbK',
-      database: 'b0iezi8ucrlxjynakxhc',
+      host: 'brwt9tnsydkcqmjfbslc-mysql.services.clever-cloud.com',
+      username: 'ujrk8mhytngnrbpa',
+      password: 'VgkxBRlijn4PVJVTb6c1',
+      database: 'brwt9tnsydkcqmjfbslc',
       entities: [join(__dirname + '/**/*.entity{.ts,.js}')],
       synchronize: false,
       ssl: {
         rejectUnauthorized: false,
-      }
+      },
+      extra: {
+        connectionLimit: 10,
+      },
+      logging: ['query', 'error'],
     }),
     UsersModule,
     AuthModule

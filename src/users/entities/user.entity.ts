@@ -1,7 +1,7 @@
 import { Column, DeleteDateColumn, PrimaryGeneratedColumn, Entity } from "typeorm";
 
 @Entity()
-export class userrivecar {
+export class usercarrive {
   @PrimaryGeneratedColumn()
   id: number;
   @Column({ length: 500 })

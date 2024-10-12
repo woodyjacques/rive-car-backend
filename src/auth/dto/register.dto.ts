@@ -10,6 +10,7 @@ export class RegisterDto {
   email: string;
 
   @IsString()
+  @MinLength(1)
   sucursal: string;
 
   @IsString()

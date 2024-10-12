@@ -36,18 +36,19 @@ export class AuthService {
 
     const hashedPassword = await bcryptjs.hash(password, 10);
 
-    await this.usersService.create({
-      name,
-      email,
-      sucursal,
-      password: hashedPassword,
-      isVerified
-    });
+    console.log(email, name, sucursal, isVerified, "info");
+    // await this.usersService.create({
+    //   name,
+    //   email,
+    //   sucursal,
+    //   password: hashedPassword,
+    //   isVerified
+    // });
 
-    const Usuario = { email, name, password }
-    let correo = "register";
+    // const Usuario = { email, name, password }
+    // let correo = "register";
 
-    await this.envioEmail(Usuario, email, correo);
+    // await this.envioEmail(Usuario, email, correo);
 
     return {
       message: "Usuario registrado correctamente.",
